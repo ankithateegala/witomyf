@@ -173,4 +173,5 @@
 -resource:"C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\obj\Debug\netcoreapp1.0\witomyf.APIdotnet-compile.deps.json",witomyf.API.deps.json
 "C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Program.cs"
 "C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Startup.cs"
-"C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Controllers\ValuesController.cs"
+"C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Controllers\WitomyfController.cs"
+"C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Models\Witomyf.cs"
