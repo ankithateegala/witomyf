@@ -1,5 +1,5 @@
---temp-output:C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\obj\Debug\netcoreapp1.0\
---out:C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\bin\Debug\netcoreapp1.0\witomyf.API.dll
+--temp-output:C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\obj\Debug\netcoreapp1.0\
+--out:C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\bin\Debug\netcoreapp1.0\witomyf.API.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -184,10 +184,10 @@
 --reference:C:\Users\ateegala\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\ateegala\.nuget\packages\System.Xml.XmlDocument\4.0.1\ref\netstandard1.3\System.Xml.XmlDocument.dll
 --reference:C:\Users\ateegala\.nuget\packages\System.Xml.XPath\4.0.1\ref\netstandard1.3\System.Xml.XPath.dll
---resource:"C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\obj\Debug\netcoreapp1.0\witomyf.APIdotnet-compile.deps.json",witomyf.API.deps.json
-C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\Program.cs
-C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\Startup.cs
-C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\Controllers\WitomyfController.cs
-C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\Interfaces\IDBHelper.cs
-C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\Models\Witomyf.cs
-C:\Users\ateegala\Source\Repos\witomy-old\witomyf.API\Utilities\DBHelper.cs
+--resource:"C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\obj\Debug\netcoreapp1.0\witomyf.APIdotnet-compile.deps.json",witomyf.API.deps.json
+C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Program.cs
+C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Startup.cs
+C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Controllers\WitomyfController.cs
+C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Interfaces\IDBHelper.cs
+C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Models\Witomyf.cs
+C:\Users\ateegala\Source\Repos\witomyf\witomyf.API\Utilities\DBHelper.cs

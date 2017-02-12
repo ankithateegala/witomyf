@@ -41,8 +41,8 @@ namespace witomyf.API.Utilities
             using (IDbConnection dbConnection = Connection)
             {
                 string sQuery = "SELECT Day, Eat1, Eat2, Eat3, Eat4, Eat5, Eat6 FROM  WITOMYF"
-                                + $" WHERE DAY={day}";
-                return dbConnection.Query<Witomyf>(sQuery).FirstOrDefault();
+                                + $" WHERE DAY=@day";
+                return dbConnection.Query<Witomyf>(sQuery, new { day }).FirstOrDefault();
             }
         }
     }
