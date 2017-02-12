@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using witomyf.API.Interfaces;
+using witomyf.API.Controllers;
+using witomyf.API.Utilities;
 
 namespace witomyf.API
 {
@@ -36,8 +39,11 @@ namespace witomyf.API
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-
             services.AddMvc();
+            services.AddSwaggerGen();
+
+            services.AddTransient<IDBHelper, DBHelper>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
@@ -51,6 +57,9 @@ namespace witomyf.API
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUi();
         }
     }
 }

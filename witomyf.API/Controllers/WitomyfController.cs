@@ -6,32 +6,40 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Net;
 using witomyf.API.Models;
+using witomyf.API.Interfaces;
 
 namespace witomyf.API.Controllers
 {
     [Route("/api/[controller]")]
     public class WitomyfController : Controller
     {
-        //GET api/witomyf
-        //[HttpGet]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
+        public readonly IDBHelper _DBHelper;
 
-        // GET api/witomyf/5
-        [HttpGet("{day}")]
-        public Witomyf Get(string day)
+        public WitomyfController(IDBHelper DBHelper)
         {
-            return new Witomyf { Day = day, Eat1 = 50 };
+            _DBHelper = DBHelper;
+        }
+
+        // GET api/witomyf/20170210
+        [HttpGet("{day}")]
+        public Witomyf Get([FromRoute]string day)
+        {
+            return _DBHelper.GetWitomyf(day);
         }
 
         // POST api/witomyf
         [HttpPost]
         public void Post([FromBody]Witomyf witomyf)
         {
-
+            _DBHelper.InsertWitomyf(witomyf);
         }
+
+        //GET api/witomyf
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
         // PUT api/witomyf/5
         //[HttpPut("{id}")]
