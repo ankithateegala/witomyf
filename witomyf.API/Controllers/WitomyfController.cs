@@ -7,9 +7,12 @@ using System.Net.Http;
 using System.Net;
 using witomyf.API.Models;
 using witomyf.API.Interfaces;
+using Microsoft.AspNetCore.Cors;
 
 namespace witomyf.API.Controllers
 {
+    [EnableCors("MyPolicy")]
+
     [Route("/api/[controller]")]
     public class WitomyfController : Controller
     {
@@ -20,14 +23,12 @@ namespace witomyf.API.Controllers
             _DBHelper = DBHelper;
         }
 
-        // GET api/witomyf/20170210
         [HttpGet("{day}")]
         public Witomyf Get([FromRoute]string day)
         {
             return _DBHelper.GetWitomyf(day);
         }
 
-        // POST api/witomyf
         [HttpPost]
         public void Post([FromBody]Witomyf witomyf)
         {
