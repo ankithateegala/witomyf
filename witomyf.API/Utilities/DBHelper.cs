@@ -30,8 +30,24 @@ namespace witomyf.API.Utilities
         {
             using (IDbConnection dbConnection = Connection)
             {
-                string sQuery = "INSERT INTO WITOMYF (Day, Eat1, Eat2, Eat3, Eat4, Eat5, Eat6, userid)"
+                string updateQuery = "UPDATE WITOMYF SET ";
+                if (Witomyf.Eat1 != null) updateQuery += "Eat1 = @Eat1, ";
+                if (Witomyf.Eat2 != null) updateQuery += "Eat2 = @Eat2, ";
+                if (Witomyf.Eat3 != null) updateQuery += "Eat3 = @Eat3, ";
+                if (Witomyf.Eat4 != null) updateQuery += "Eat4 = @Eat4, ";
+                if (Witomyf.Eat5 != null) updateQuery += "Eat5 = @Eat5, ";
+                if (Witomyf.Eat6 != null) updateQuery += "Eat6 = @Eat6, ";
+                updateQuery = updateQuery.Remove(updateQuery.Length - 2); ;
+                updateQuery += " WHERE [DAY] = @Day";
+
+                string insertQuery = "INSERT INTO WITOMYF ([DAY], Eat1, Eat2, Eat3, Eat4, Eat5, Eat6, userid)"
                                 + " VALUES(@Day, @Eat1, @Eat2, @Eat3, @Eat4, @Eat5, @Eat6, 1)";
+
+                string sQuery = "IF EXISTS (SELECT [DAY] FROM WITOMYF WHERE [DAY] = @Day)" + 
+                                updateQuery + 
+                                " ELSE " +
+                                insertQuery;
+
                 dbConnection.Execute(sQuery, Witomyf);
             }
         }
